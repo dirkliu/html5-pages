@@ -1,0 +1,15 @@
+{
+  "name": "vue2-html5s",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:webTechMutual/vue2-html5s.git",
+  "author": "dirkliu <liuqi0702@126.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vant": "^2.12.9",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "webpack": "^5.26.3"
+  }
+}
