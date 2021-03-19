@@ -1,4 +1,4 @@
-# vue2-html5s
+# vue-html5s
 基于vue2的多页面web项目，使用vant库，构建工具使用webpack5  
 
 ### 实现的功能
