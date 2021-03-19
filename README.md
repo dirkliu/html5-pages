@@ -1,5 +1,29 @@
-# vue2-htmls5
+# vue2-html5s
 基于vue2的多页面web项目，使用vant库，构建工具使用webpack5  
+
+### 实现的功能
+1. vue多页面开发;
+2. 构建自动化;
+3. 页面热更新；
+
+### 安装，运行和构建
+1. 安装第三方库  
+``` 
+yarn
+```  
+2. 本地运行 
+``` 
+yarn serve
+```
+3. 构建
+``` 
+yarn build
+```  
+
+### 页面开发
+1. 在src目录下新增一个html文件（如index.html）
+2. 在src目录下新增一个与html文件同名的目录（如index） 
+3. 在新增的这个目录（如index）下，新增一个main.js文件
 
 ### 第三方库
 * [vue2](https://cn.vuejs.org/v2/guide/)

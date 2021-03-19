@@ -15,6 +15,10 @@ module.exports = merge(baseConf, {
     path: path.resolve(__dirname, '../dist'),
     clean: true,
     publicPath: '/',
+    assetModuleFilename: (pathData, assetInfo) => {
+      let filePath = path.dirname(pathData.filename).replace(/^\/*src\//, '')
+      return filePath + '/[name][ext][query]'
+    }
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()

@@ -16,7 +16,7 @@ try{
 function getEntries(entries) {
   var entry = {};
   entries.forEach(item => {
-    entry[item] = './src/' + item + '/main'
+    entry[item] = ['webpack-hot-middleware/client', './src/' + item + '/main']
   })
   return entry
 }
@@ -42,6 +42,22 @@ module.exports = {
         loaders: {
           css: ['vue-style-loader', 'css-loader'],
           scss: ['vue-style-loader', 'css-loader', 'sass-loader']
+        }
+      }
+    }, {
+      test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+      type: 'asset',
+      parser: {
+        dataUrlCondition: {
+          maxSize: 4 * 1024 // 4kb
+        }
+      }
+    }, {
+      test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+      type: 'asset',
+      parser: {
+        dataUrlCondition: {
+          maxSize: 4 * 1024 // 4kb
         }
       }
     }]
