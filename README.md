@@ -13,7 +13,7 @@ yarn
 ```  
 2. 本地运行 
 ``` 
-yarn serve
+yarn dev
 ```
 3. 构建
 ``` 
@@ -30,3 +30,8 @@ yarn build
 * [vant](https://youzan.github.io/vant/#/zh-CN/): 有赞移动端vue框架  
 * [webpack5](https://webpack.docschina.org/concepts/)  
 
+### todo
+1. 优化构建流程，分全局构建和局部构建; 
+2. 优化构建性能;
+3. css提取压缩;
+4. 构建预览

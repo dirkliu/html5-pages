@@ -5,14 +5,16 @@
 </template>
 
 <script>
+import {NavBar} from 'vant'
 export default {
   name: 'app',
   data () {
     return {
-      json: {
-        name: 'liu77'
-      }
     }
+  },
+
+  components: {
+    [NavBar.name]: NavBar
   }
 }
 </script>

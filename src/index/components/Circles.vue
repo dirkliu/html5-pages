@@ -1,10 +1,15 @@
 <template>
   <div class="circles-page">
+    <div class="banner">
+      <img src="../imgs/test333.jpg"/>
+    </div>
     <div class="circles">
       <div class="circle"></div>
       <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
     </div>
-    <img src="../imgs/test333.jpg"/>
+    
   </div>
 </template>
 
@@ -15,12 +20,16 @@
   }
 </script>
 
-<style>
+<style lang="scss">
 .circle {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 5px solid #dd6633;
+}
+.banner {
+  text-align: center;
+  margin: 20px;
 }
 .circles {
   display: flex;

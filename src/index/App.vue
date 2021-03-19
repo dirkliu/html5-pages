@@ -1,6 +1,6 @@
 <template>
   <div class="app-wrapper">
-    <van-nav-bar title="webview中心"/>
+    <van-nav-bar title="webview中心"></van-nav-bar>
     <van-list>
       <van-cell title="应用分发" is-link url="/appIssue.html"/>
     </van-list>
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import {NavBar, List, Cell, Tabbar, TabbarItem} from 'vant'
 import Circles from './components/Circles.vue'
 export default {
   name: 'app',
@@ -27,6 +28,11 @@ export default {
   },
 
   components: {
+    [NavBar.name]: NavBar,
+    [List.name]: List,
+    [Cell.name]: Cell,
+    [Tabbar.name]: Tabbar,
+    [TabbarItem.name]: TabbarItem,
     Circles
   }
 }
