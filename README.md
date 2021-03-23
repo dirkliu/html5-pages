@@ -1,4 +1,4 @@
-# vue-html5s
+# webview-html5-vue
 基于vue2的多页面web项目，使用vant库，构建工具使用webpack5  
 
 ### 实现的功能
@@ -29,9 +29,10 @@ yarn build
 * [vue2](https://cn.vuejs.org/v2/guide/)
 * [vant](https://youzan.github.io/vant/#/zh-CN/): 有赞移动端vue框架  
 * [webpack5](https://webpack.docschina.org/concepts/)  
+* [yarn](https://yarnpkg.com/getting-started)
 
 ### todo
 1. 优化构建流程，分全局构建和局部构建; 
 2. 优化构建性能;
-3. css提取压缩;
-4. 构建预览
+3. 构建预览
+

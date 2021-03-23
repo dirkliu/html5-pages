@@ -2,14 +2,7 @@
   <div class="circles-page">
     <div class="banner">
       <img src="../imgs/test333.jpg"/>
-    </div>
-    <div class="circles">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
-    
+    </div>    
   </div>
 </template>
 

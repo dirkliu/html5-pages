@@ -1,13 +1,14 @@
 {
-  "name": "vue2-html5s",
+  "name": "webview-html5-vue",
   "version": "0.0.1",
   "main": "index.js",
   "repository": "git@10.100.14.253:frontend/webview-html5-vue.git",
-  "author": "dirkliu",
+  "author": "刘琦 <liuqi1-iri@360.cn>",
   "license": "MIT",
   "scripts": {
     "dev": "node ./build/server.js",
-    "build": "webpack --config build/prodConf.js"
+    "build": "webpack --config build/prodConf.js",
+	"preview": "node ./build/previewServer.js"
   },
   "dependencies": {
     "vant": "^2.12.9",
@@ -25,7 +26,10 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "node-sass": "^5.0.0",
+    "opn": "^6.0.0",
     "sass-loader": "^11.0.1",
+    "serve": "^11.3.2",
+    "serve-static": "^1.14.1",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",
     "vue-loader": "^15.9.6",

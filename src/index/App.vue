@@ -1,10 +1,10 @@
 <template>
   <div class="app-wrapper">
     <van-nav-bar title="webview中心"></van-nav-bar>
+    <circles/>
     <van-list>
       <van-cell title="应用分发" is-link url="/appIssue.html"/>
     </van-list>
-    <circles/>
 
     <van-tabbar v-model="active" active-color="#ee0a24" inactive-color="#000" fixed>
   <van-tabbar-item icon="home-o">首页</van-tabbar-item>

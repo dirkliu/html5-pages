@@ -1,9 +1,11 @@
 const express = require('express')
+const opn = require('opn')
 const webpack = require('webpack')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const config = require('./devConf.js');
 const app = new express()
 const compiler = webpack(config)
+const PORT = 80
 
 const hotMiddleware = require('webpack-hot-middleware')(compiler, {
   log: () => {
@@ -20,6 +22,8 @@ app.use(
 app.use(hotMiddleware)
 
 // 将文件 serve 到 port 8080。
-app.listen(8080, function () {
-  console.log('App listening on port 8080!\n');
+app.listen(PORT, function () {
+  console.log('Develop server listening on port ' + PORT + '!\n');
 })
+
+opn('http://localhost:' + PORT)
