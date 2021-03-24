@@ -19,7 +19,7 @@ module.exports = merge(baseConf, {
       use: [
         {loader: 'style-loader'},
         {loader: 'css-loader'},
-        {loader: path.resolve(__dirname, './loaders/px2vw')}
+        {loader: 'qi-px2vw-loader'}
       ],
     },{
       test: /\.s[ac]ss$/i,
@@ -27,7 +27,7 @@ module.exports = merge(baseConf, {
         {loader: 'style-loader'},
         {loader: 'css-loader'},
         {loader: 'sass-loader'},
-        {loader: path.resolve(__dirname, './loaders/px2vw')}
+        {loader: 'qi-px2vw-loader'}
       ],
     }]
   },

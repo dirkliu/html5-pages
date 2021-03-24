@@ -20,7 +20,7 @@ module.exports = {
           css: ['vue-style-loader', 'css-loader', {
             loader: path.resolve(__dirname, './loaders/px2vw')
           }],
-          scss: ['vue-style-loader', 'css-loader', 'sass-loader', {loader: path.resolve(__dirname, './loaders/px2vw')}]
+          scss: ['vue-style-loader', 'css-loader', 'sass-loader', 'qi-px2vw-loader']
         }
       }
     }, {
