@@ -1,17 +1,19 @@
 const fs = require('fs')
 const path = require('path')
-
+const srcPath = path.resolve(__dirname, '../', './src')
 let entryDirs = []
 try{
-  entryDirs = fs.readdirSync(path.resolve(__dirname, '../', './src'), {
+  entryDirs = fs.readdirSync(srcPath, {
     withFileTypes: true
-  }).filter(item => item.isDirectory()).map(item => item.name)
+  }).filter(item => {
+    return item.isDirectory() && fs.existsSync(path.resolve(srcPath, item.name, 'main.js'))
+  }).map(item => item.name)
 } catch (err) {
   throw err
 }
 
 function getEntries(entries, isDevelop) {
-  var entry = {};
+  var entry = {}
   entries.forEach(item => {
     entry[item] = ['./src/' + item + '/main']
     isDevelop && entry[item].unshift('webpack-hot-middleware/client')

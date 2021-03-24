@@ -1,15 +1,16 @@
 <template>
   <div class="app-wrapper">
-    <van-nav-bar title="webview中心"></van-nav-bar>
+    <div class="page-nav">多页html5项目演示</div>
     <circles/>
     <van-list>
-      <van-cell title="应用分发" is-link url="/appIssue.html"/>
+      <van-cell title="VUE + VANT" is-link url="/demo1.html"/>
+      <van-cell title="VUE(外链) + VANT" is-link url="/demo2.html"/>
+      <van-cell title="不使用VUE" is-link url="/demo3.html"/>
+      <van-cell title="部分使用静态资源" is-link url="demo4.html"/>
+      <van-cell title="全部使用静态资源" is-link url="/static/demo4/demo4.html"/>
     </van-list>
 
     <van-tabbar v-model="active" active-color="#ee0a24" inactive-color="#000" fixed>
-  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
-  <van-tabbar-item icon="friends-o">记录</van-tabbar-item>
-  <van-tabbar-item icon="setting-o">我的</van-tabbar-item>
 </van-tabbar>
   </div>
 </template>
@@ -22,7 +23,6 @@ export default {
   data () {
     return {
       json: {
-        name: 'liu77'
       }
     }
   },
@@ -37,3 +37,17 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+}
+.page-nav {
+  background-color: #576b95;
+  line-height: 60px;
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+}
+</style>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>部分使用静态资源</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+</head>
+<body>
+<div id="app">
+  <header>部分使用静态资源</header>
+  <div class="main-banner"><img src="/demo4/static/panda.jpg"></div>
+  <article>
+    <textarea class="code-container">
+// src/demo4.html  
+<!DOCTYPE html>
+<html>
+<head>
+  <title>部分使用静态资源</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+</head>
+<body>
+<div id="app">
+  <header>部分使用静态资源</header>
+  <div class="main-banner"><img src="/demo4/static/panda.jpg"></div>
+  <article>
+  </article>
+  <footer>
+    <a class="btn btn-primary" id="backHome">首页</a>
+  </footer>
+</div>
+<script src="/demo4/static/a.js"></script>
+</body>
+</html>
+
+// demo4/main.js  
+import './style.css'
+document.querySelector("#backHome").addEventListener('click', () => {
+  window.location.href = '/index.html'
+}, false)
+
+// static/a.js
+console.log('a static js')
+    </textarea>
+
+  </article>
+  <footer>
+    <a class="btn btn-primary" id="backHome">首页</a>
+  </footer>
+</div>
+<script src="/demo4/static/a.js"></script>
+</body>
+</html>

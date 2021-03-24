@@ -1,10 +1,11 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const {entryDirs} = require('./entries')
 module.exports = {
   externals: {
-    'vue': 'Vue',
+    // 'vue': 'Vue',
     // 'vant': 'vant'
   },
   module: {
@@ -18,7 +19,7 @@ module.exports = {
       options: {
         loaders: {
           css: ['vue-style-loader', 'css-loader', {
-            loader: path.resolve(__dirname, './loaders/px2vw')
+            loader: 'qi-px2vw-loader'
           }],
           scss: ['vue-style-loader', 'css-loader', 'sass-loader', 'qi-px2vw-loader']
         }
@@ -52,6 +53,18 @@ module.exports = {
       "removeAttributeQuotes": true
     }
   })).concat([
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+
+    // copy custom public assets
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: path.resolve(__dirname, '../static'),
+        to: path.resolve(__dirname, '../dist/static')
+      }, {
+        from: '**/static/**/*',
+        context: path.resolve(__dirname, '../src'),
+        to: "[path]/[name][ext]"
+      }]
+    })
   ])
 }

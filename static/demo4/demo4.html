@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>全部使用静态资源</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+  <link href="/static/demo4/demo4.css" rel=stylesheet>
+</head>
+<body>
+<div id="app">
+  <header>全部使用静态资源</header>
+  <article>
+
+    <textarea class="code-container">
+// static/demo4.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>全部使用静态资源</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<link href="/static/demo4/demo4.css" rel=stylesheet>
+</head>
+<body>
+<div id="app">
+<header>全部使用静态资源</header>
+<article>
+</article>
+<footer>
+<a class="btn btn-primary" id="backHome">首页</a>
+</footer>
+</div>
+<script src="/static/demo4/demo4.js"></script>
+</body>
+</html>
+      
+// static/demo4.js
+document.querySelector("#backHome").addEventListener('click', () => {
+  window.location.href = '/index.html'
+}, false)
+
+
+// static/demo4.css
+* {
+  padding: 0;
+  margin: 0;
+}
+      
+html {
+  font-size: 28px;
+}
+      
+html, body, #app {
+  height: 100%;
+}
+      
+#app {
+  display: flex;
+  flex-direction: column;
+}
+      
+header {
+  background-color: #576b95;
+  line-height: 60px;
+  text-align: center;
+  color:#fff;
+}
+      
+article {
+  flex-grow: 1;
+}
+      
+footer {
+  bottom: 0;
+  padding: 20px;
+}
+      
+.btn {
+  color:#fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #07c160;
+}
+      
+.code-container {
+  width: 100%;
+  height:100%;
+  box-sizing: border-box;
+  resize: none;
+}      
+    </textarea>
+
+
+  </article>
+  <footer>
+    <a class="btn btn-primary" id="backHome">首页</a>
+  </footer>
+</div>
+<script src="/static/demo4/demo4.js"></script>
+</body>
+</html>

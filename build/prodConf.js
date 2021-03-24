@@ -2,7 +2,6 @@ const path = require('path')
 const {merge} = require('webpack-merge')
 const TerserPlugin = require("terser-webpack-plugin")
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const baseConf = require('./baseConf')
@@ -33,14 +32,6 @@ module.exports = merge(baseConf, {
   plugins: [
     // copy custom public assets
     new CleanWebpackPlugin(),
-
-    // copy custom public assets
-    new CopyWebpackPlugin({
-      patterns: [{
-        from: path.resolve(__dirname, '../static'),
-        to: path.resolve(__dirname, '../dist/static')
-      }]
-    }),
 
     new MiniCssExtractPlugin({
       filename: '[name]/[name].[chunkhash].css',

@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack= require('webpack')
 const {merge} = require('webpack-merge')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const baseConf = require('./baseConf')
 const {getEntry} = require('./entries')
 
@@ -19,7 +18,9 @@ module.exports = merge(baseConf, {
       use: [
         {loader: 'style-loader'},
         {loader: 'css-loader'},
-        {loader: 'qi-px2vw-loader'}
+        {
+          loader: 'qi-px2vw-loader'
+        }
       ],
     },{
       test: /\.s[ac]ss$/i,
@@ -27,13 +28,15 @@ module.exports = merge(baseConf, {
         {loader: 'style-loader'},
         {loader: 'css-loader'},
         {loader: 'sass-loader'},
-        {loader: 'qi-px2vw-loader'}
+        {
+          loader: 'qi-px2vw-loader'
+        }
       ],
     }]
   },
   output: {
     filename: '[name]/main.js',
-    path: path.resolve(__dirname, '../dev'),
+    path: path.resolve(__dirname, '../dist'),
     clean: true,
     publicPath: '/',
     assetModuleFilename: (pathData, assetInfo) => {
@@ -42,13 +45,6 @@ module.exports = merge(baseConf, {
     }
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    // copy custom public assets
-    new CopyWebpackPlugin({
-      patterns: [{
-        from: path.resolve(__dirname, '../static'),
-        to: path.resolve(__dirname, '../dev/static')
-      }]
-    })
+    new webpack.HotModuleReplacementPlugin()
   ]
 })
