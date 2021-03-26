@@ -1,9 +1,11 @@
+process.env.NODE_ENV = 'production'
+
 const fs = require('fs')
 const express = require('express')
 const path = require('path')
 const opn = require('opn')
 const app = new express()
-const PORT = 9090
+const {port} = require('./env')
 const root = path.join(__dirname, '../dist')
 
 if (!fs.existsSync(root)) {
@@ -14,8 +16,8 @@ fs.existsSync(path)
 app.use(express.static(path.join(__dirname, '../dist')))
 
 // 将文件 serve 到 port 9090。
-app.listen(PORT, function () {
-  console.log('Preview server listening on port ' + PORT + '!\n');
+app.listen(port, function () {
+  console.log('Preview server listening on port ' + port + '!\n');
 })
 
-opn('http://localhost:' + PORT)
+opn('http://localhost:' + port)

@@ -2,7 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const {entryDirs} = require('./entries')
+const {entryDirs} = require('./env')
 module.exports = {
   externals: {
     // 'vue': 'Vue',

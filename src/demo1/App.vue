@@ -7,7 +7,7 @@
       text="vue2，vant按需引入">
     </van-notice-bar>
     <div>示例：</div>
-    <textarea class="code-containner" resizable="false">
+    <textarea class="code-containner" resizable="false" ref="textToCopy">
 <!-- src/demo1.html-->
 <!DOCTYPE html>
 <html>
@@ -39,6 +39,7 @@ new Vue({
 
     <div class="bottom-btns">
       <van-button type="primary" url="/index.html">首页</van-button>
+      <van-button type="primary" @click="onCopy">复制</van-button>
     </div>
   </div>
 </template>
@@ -54,6 +55,13 @@ export default {
     [NavBar.name]: NavBar,
     [Button.name]: Button,
     [NoticeBar.name]: NoticeBar
+  },
+
+  methods: {
+    onCopy () {
+      this.$refs.textToCopy.select()
+      document.execCommand("copy")
+    }
   }
 }
 </script>

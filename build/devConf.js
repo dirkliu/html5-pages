@@ -2,15 +2,15 @@ const path = require('path')
 const webpack= require('webpack')
 const {merge} = require('webpack-merge')
 const baseConf = require('./baseConf')
-const {getEntry} = require('./entries')
+const {getEntry} = require('./env')
 
 module.exports = merge(baseConf, {
-  entry: getEntry(true),
+  entry: getEntry(),
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
     hot: true,
-    contentBase: path.join(__dirname, '../dev'),
+    contentBase: path.join(__dirname, '../dist'),
   },
   module: {
     rules: [{

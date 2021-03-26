@@ -1,3 +1,5 @@
+process.env.NODE_ENV = 'production'
+
 const path = require('path')
 const {merge} = require('webpack-merge')
 const TerserPlugin = require("terser-webpack-plugin")
@@ -5,7 +7,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const baseConf = require('./baseConf')
-const {getEntry} = require('./entries')
+const {getEntry} = require('./env')
 
 module.exports = merge(baseConf, {
   entry: getEntry(),
