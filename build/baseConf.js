@@ -19,9 +19,17 @@ module.exports = {
       options: {
         loaders: {
           css: ['vue-style-loader', 'css-loader', {
-            loader: 'qi-px2vw-loader'
+            loader: 'qi-px2vw-loader',
+            options: {
+              exclude: /node_modules/
+            }
           }],
-          scss: ['vue-style-loader', 'css-loader', 'sass-loader', 'qi-px2vw-loader']
+          scss: ['vue-style-loader', 'css-loader', 'sass-loader', {
+            loader: 'qi-px2vw-loader',
+            options: {
+              exclude: /node_modules/
+            }
+          }]
         }
       }
     }, {

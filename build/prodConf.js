@@ -19,7 +19,12 @@ module.exports = merge(baseConf, {
       use: [
         MiniCssExtractPlugin.loader, 
         'css-loader',
-        {loader: 'qi-px2vw-loader'}
+        {
+          loader: 'qi-px2vw-loader',
+          options: {
+            exclude: /node_modules/
+          }
+        }
       ],
     },{
       test: /\.s[ac]ss$/i,
@@ -27,7 +32,12 @@ module.exports = merge(baseConf, {
         MiniCssExtractPlugin.loader,
         "css-loader",
         "sass-loader", 
-        {loader: 'qi-px2vw-loader'}  
+        {
+          loader: 'qi-px2vw-loader',
+          options: {
+            exclude: /node_modules/
+          }
+        }  
       ],
     }]
   },

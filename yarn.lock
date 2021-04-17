@@ -4471,10 +4471,10 @@ q@^1.1.2:
   resolved "https://registry.npm.taobao.org/q/download/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
-qi-px2vw-loader@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npm.taobao.org/qi-px2vw-loader/download/qi-px2vw-loader-1.0.0.tgz#365bd693bc087d0609eb1e3085572c4e41298abe"
-  integrity sha1-NlvWk7wIfQYJ6x4whVcsTkEpir4=
+qi-px2vw-loader@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/qi-px2vw-loader/download/qi-px2vw-loader-1.0.1.tgz#031ce171c683f4abfed0049820df791859ed23d8"
+  integrity sha1-AxzhccaD9Kv+0ASYIN95GFntI9g=
 
 qs@6.7.0:
   version "6.7.0"

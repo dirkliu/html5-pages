@@ -19,7 +19,10 @@ module.exports = merge(baseConf, {
         {loader: 'style-loader'},
         {loader: 'css-loader'},
         {
-          loader: 'qi-px2vw-loader'
+          loader: path.resolve(__dirname, './loaders/px2vw'),
+          options: {
+            exclude: /node_modules/
+          }
         }
       ],
     },{
@@ -29,7 +32,10 @@ module.exports = merge(baseConf, {
         {loader: 'css-loader'},
         {loader: 'sass-loader'},
         {
-          loader: 'qi-px2vw-loader'
+          loader: 'qi-px2vw-loader',
+          options: {
+            exclude: /node_modules/
+          }
         }
       ],
     }]
